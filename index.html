@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"
+	<title></title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="heading">
+	</div>
+
+	<div class="score">
+		 	<h3>Ingrese cuatro digitos diferentes y oprima <strong class="enter">Enter</strong></h3>
+	</div>
+
+	<div>
+		<input type="number" name="number" id="number" class="number" value="" autofocus onkeyUp="user_number()"
+	  	onkeypress="onPress_ENTER()"/>
+
+<strong><pre id="output"></pre></strong>
+	</div>
+
+<ul class="flex-container"> <!-- contenedor -->
+  <li class="item" id="item1">Intento #</li> <!-- cada uno de los ítems del grid -->
+	<li class="item" id="item2">Número</li>
+  <li class="item" id="item3">Picas</li>
+  <li class="item" id="item4">Fijas</li>
+</ul>
+	<script src="js/app.js"></script>
+</body>
+</html>
