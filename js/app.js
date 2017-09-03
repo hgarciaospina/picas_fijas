@@ -1,19 +1,13 @@
 var correct;
 var random_number = "";
 var prueba1;
-var prueba2;
 array_user_number = [];
 
 //Inicializa el juego
 game();
 
-//Carga en un arreglo el número ingresado por el usuario
-
-
 function game() {
 	random();
-	//save();
-	//load_array_user_number();
 }
 
 //Genera número al azar de 4 digitos no repetidos y puede  incluir el cero al inicio
@@ -47,43 +41,33 @@ function user_number(){
 	}
 }
 
-//function save(el, e) {
-function save(e) {
-  //if (e.key === 'Enter' || e.keyCode === 13) {
-	   if (e.which === 13 || e.keyCode === 13) {
-    //var prueba1 = number.textContent += el.value;
-		prueba1 = number.textContent.value;
-		alert(' numero usuario ' + prueba1 + ' numero al azar ' + random_number );
-    el.value = '';
-  }
-}
-
+//Carga en un arreglo el número ingresado por el usuario una oprime la tecla <Enter>
 function onPress_ENTER()
 {
-        var keyPressed = event.keyCode || event.which;
+    var keyPressed = event.keyCode || event.which;
 
-        if(keyPressed==13)
-        {
-					prueba1 = 	document.getElementById('number').value;
-				  alert(' numero usuario ' + prueba1 + ' numero al azar ' + random_number );
+    if(keyPressed==13)
+    {
+			prueba1 = 	document.getElementById('number').value;
+		  alert(' numero usuario ' + prueba1 + ' numero al azar ' + random_number );
 
-					for(k = 0; k < prueba1.length; k++){
-						 array_user_number[k] = parseInt(prueba1.charAt(k));
-					 }
-					 alert(' array user_number ' + array_user_number );
-					 arrays();
-           keyPressed=null;
-        }
-        else
-        {
-            return false;
-        }
+			for(k = 0; k < prueba1.length; k++){
+				 array_user_number[k] = parseInt(prueba1.charAt(k));
+			 }
+			 alert(' array user_number ' + array_user_number );
+			 arrays();
+       keyPressed=null;
+    }
+    else
+    {
+        return false;
+    }
 }
 
+// Prueba que imprime lpos datos almacenados del usuario y del sistema
 function arrays(){
 	for(k = 0; k < 4; k++){
 		 alert('numeros usuario ' + ' posición  ' + '[' + k + ']' + array_user_number[k]);
 		 alert('numeros sistema ' + ' posición  ' + '[' + k + ']' + random_number[k]);
 	}
-
 }
