@@ -48,7 +48,7 @@ function onPress_ENTER()
 
     if(keyPressed==13)
     {
-			prueba1 = 	document.getElementById('number').value;
+			prueba1 = document.getElementById('number').value;
 		  alert(' numero usuario ' + prueba1 + ' numero al azar ' + random_number );
 
 			for(k = 0; k < prueba1.length; k++){
